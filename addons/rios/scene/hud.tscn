@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmhlotk087dhg"]
+
+[ext_resource type="Script" uid="uid://cha2i8bx16uks" path="res://script/hud.gd" id="1_s3k51"]
+
+[node name="hud" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_s3k51")
+
+[node name="info" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="info"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="info"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="info"]
+layout_mode = 2
+
+[node name="Label4" type="ProgressBar" parent="info"]
+layout_mode = 2
+
+[node name="Label5" type="ProgressBar" parent="info"]
+layout_mode = 2
+
+[node name="Label6" type="ProgressBar" parent="info"]
+layout_mode = 2
+
+[node name="Label7" type="ProgressBar" parent="info"]
+layout_mode = 2
+
+[node name="Label8" type="Label" parent="info"]
+layout_mode = 2
+
+[node name="Label9" type="Label" parent="info"]
+layout_mode = 2

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://q8aqvg7ncllu"]
+
+[ext_resource type="AudioStream" uid="uid://fddsifloegvw" path="res://sound/engine_mixed.wav" id="1_tjg6v"]
+[ext_resource type="Script" uid="uid://bnqhvea1ckj8t" path="res://script/engine_sound.gd" id="2_1dndh"]
+
+[node name="EngineSound" type="AudioStreamPlayer3D"]
+stream = ExtResource("1_tjg6v")
+script = ExtResource("2_1dndh")

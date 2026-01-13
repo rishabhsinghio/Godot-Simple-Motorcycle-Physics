@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://w4dkhafgpj80"]
+
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_k7gn7"]
+[ext_resource type="PackedScene" uid="uid://bmqmevpmsoufh" path="res://addons/rios/scene/motorcycle.tscn" id="2_2m7pl"]
+[ext_resource type="PackedScene" uid="uid://6aypjavgpk2t" path="res://addons/rios/scene/touch_control.tscn" id="3_tiwm4"]
+[ext_resource type="PackedScene" uid="uid://cmhlotk087dhg" path="res://addons/rios/scene/hud.tscn" id="4_22ixf"]
+[ext_resource type="PackedScene" uid="uid://b3qauaodylveg" path="res://addons/rios/scene/follow_camera.tscn" id="5_oykuh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_elayf"]
+albedo_texture = ExtResource("1_k7gn7")
+uv1_triplanar = true
+
+[node name="track" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.6153589, 0.7882471, 0, -0.7882471, 0.6153589, 0, 0, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(1000, 0, 1000)
+material = SubResource("StandardMaterial3D_elayf")
+
+[node name="motorcycle" parent="." instance=ExtResource("2_2m7pl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="touch_control" parent="." instance=ExtResource("3_tiwm4")]
+
+[node name="hud" parent="." node_paths=PackedStringArray("bike") instance=ExtResource("4_22ixf")]
+bike = NodePath("../motorcycle")
+
+[node name="FollowCamera" parent="." node_paths=PackedStringArray("follow_this") instance=ExtResource("5_oykuh")]
+follow_this = NodePath("../motorcycle")

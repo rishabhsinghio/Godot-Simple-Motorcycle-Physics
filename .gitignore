@@ -1,0 +1,19 @@
+# Godot 4
+.import/
+.export/
+.export_presets.cfg
+
+# Mono / C#
+.mono/
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Backups
+*.tmp
+*.bak
+# Godot 4+ specific ignores
+.godot/
+/android/

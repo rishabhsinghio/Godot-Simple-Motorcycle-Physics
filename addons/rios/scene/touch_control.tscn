@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://6aypjavgpk2t"]
+
+[ext_resource type="Texture2D" uid="uid://55umv3b66a8" path="res://icon.svg" id="1_icj5n"]
+
+[node name="touch_control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(972, 321)
+texture_normal = ExtResource("1_icj5n")
+action = "Throttle"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+position = Vector2(972, 472)
+texture_normal = ExtResource("1_icj5n")
+action = "Front Brake"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="."]
+position = Vector2(794, 475)
+texture_normal = ExtResource("1_icj5n")
+action = "Rear Brake"
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="."]
+position = Vector2(72, 473)
+texture_normal = ExtResource("1_icj5n")
+action = "Steer Left"
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="."]
+position = Vector2(259, 468)
+texture_normal = ExtResource("1_icj5n")
+action = "Steer Right"
